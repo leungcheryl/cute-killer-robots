@@ -8,7 +8,7 @@ hangman.words = [
     'GREEN'
 ];
 
-
+hangman.guesses = [];
 
 hangman.selection = function (wordsInLetters, chosenLetter) {
     console.log(wordsInLetters);
@@ -27,20 +27,16 @@ hangman.selection = function (wordsInLetters, chosenLetter) {
     } else if (roundCounter != 0) {
         console.log('yay')
         roundCounter = 0;
-        $('.answer').html('');
-
+        $('.answer').html('');    
        
             for (let i = 0; i < wordsInLetters.length; i++) {
-                if (chosenLetter === wordsInLetters[i]) {
-                    console.log(chosenLetter);
+
+                if (hangman.guesses.includes(wordsInLetters[i])) {
                     console.log(wordsInLetters[i]);
-                    $('.answer').append(`${chosenLetter}`);
+                    $('.answer').append(`${wordsInLetters[i]}`);
                 } else {
-                    $('.answer').append(`
-                <p class="underscore"> _ </p>
-                `)
+                    $('.answer').append(`<p class="underscore"> _ </p>`)
                 }
-           
         }
     }
     
@@ -71,33 +67,14 @@ hangman.guess = function() {
     $('.ltr-btn').click(function (event) {
         event.preventDefault();
         const chosenLetter = $('input[name=letter]:checked').val();
+        hangman.guesses.push(chosenLetter);
         hangman.selection(hangman.selectedWord, chosenLetter);
-
+        console.log(hangman.guesses);
     });
 };
 
 hangman.guess();
 
-// console.log(typeof hangman.guess);
-
-
-// const selection = (wordsInLetters, chosenLetter) => {
-//     // console.log(typeof wordsInLetters.forEach);
-//     console.log("array?: ", typeof wordsInLetters);
-//     wordsInLetters.forEach(item => {
-//         if (item === chosenLetter) {
-//             console.log('yay');
-//         } 
-//     });
-
-//     // if (word sInLetters === chosenLetter) {
-//     //     console.log('true')
-//     // } else {
-//     //     console.log('none')
-//     // }
-
-//     // console.log(checks); 
-// };
 
 
 
