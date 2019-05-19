@@ -18,10 +18,16 @@
             display: inline;
         }
 
+        p.lives {
+
+        }
+
     </style>
 </head>
 <body>
-
+    <div class="lives">
+        <p class="lives">Total Lives: <span class="lives-update"></span></p>
+    </div>
     <div class="answer">
         <div class="show-letter"></div>
     </div>
@@ -166,6 +172,7 @@
             </label>
         </div>
         <div class="letter-container">
+            
             <input type="radio" id="letter" name="letter" value="X">
             <label for="X">
                 <p class="ltr">X</p>
@@ -184,7 +191,21 @@
             </label>
         </div>
 
-        <button class="ltr-btn" type="submit">Guess A Letter</button>
+        <label for="Submit" class="visuallyHidden">Click Here to Guess A Letter</label>
+        <button class="ltr-btn" type="submit" id="submit">Guess A Letter</button>
+
+    </div>
+
+    <div class="wrong-letters">
+
+    </div>
+
+    <div class="guess-word">
+        <form id="form">
+            <label for="guess-text">Know the Word? Guess Here and Press Submit</label>
+            <input type="text" class="guess-text" id="guess-text" name="guess-text" required="true" placeholder="Type Word Here">
+            <button class="guess-btn" type="submit" id="guess-text">GUESS WORD!</button>
+        </form>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
