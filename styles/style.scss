@@ -1,3 +1,151 @@
 @import "partials/_setup.scss";
 @import "partials/_mixins.scss";
 @import "partials/_variables.scss";
+@import "partials/_animations.scss";
+
+   /******************
+		G E N E R A L
+		S T Y L E S  
+    *******************/
+
+html {
+	font-size: 125%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.4s all ease;
+}
+
+body {
+    background-color: #10110C;
+    color: white;
+}
+
+   /******************
+		H E A D E R
+		S T Y L E S  
+    *******************/
+
+.header-title {
+    text-align: center;
+    margin-bottom: 3%;
+    h1 {
+        font-family: 'Bungee Shade', cursive;
+        font-size: 3rem;
+        margin-bottom: 0;
+        color: #68B5BE;
+        span.cute-text {
+            font-family: 'Meddon', cursive;
+            font-size: 3.5rem;
+            color: white;
+        }
+        span.killer-text {
+            font-family: 'Nosifer', cursive;
+            color: #B03030;
+        }
+    }
+    h2 {
+        margin-top: 0;
+        font-family: 'Press Start 2P', cursive;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.9rem;
+    }
+}
+
+.wrapper {
+    width: 90%;
+    display: flex;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.game {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    font-family: 'Source Code Pro', monospace;
+    .intro-text {
+        text-align: center;
+    }
+}
+
+.answer {
+    margin-bottom: 5%;
+    p.underscore {
+        display: inline;
+    }
+}
+
+.hangman-robot {
+    width: 50%;
+    border: 1px solid orange;
+    .robot-container {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .claw {
+            width: 15%;
+        }
+        .robot {
+            display: none;
+        }
+        .head {
+            width: 250px;
+        }
+        
+        .robot img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.body-container {
+    overflow: hidden;
+    width: 300px;
+    .right-arm {
+        width: 100%;
+        height: 100%;
+        // display: block;
+    }
+    .left-arm {
+        width: 100%;
+        height: 100%;
+        // display: block;
+    }
+    .body {
+        width: 100%;
+        height: 100%;
+        // display: block;
+    }
+}
+
+.legs-container {
+    .left-leg {
+        width: 300px;
+    }
+    .right-leg {
+        width: 300px;
+    }
+}
+
+.lives {
+    margin-top: 5%;
+}
+
+.letters-box {
+    display: flex;
+}
