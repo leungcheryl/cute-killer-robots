@@ -11,11 +11,9 @@ hangman.words = [
 hangman.guesses = [];
 hangman.correctGuesses = 0;
 hangman.lives = 6;
-hangman.finalGuess;
 
-
-hangman.selection = function (wordsInLetters, chosenLetter) {
-
+hangman.game = function (wordsInLetters, chosenLetter) {
+    const completeWord = wordsInLetters.join('');
     console.log(wordsInLetters);
     console.log(chosenLetter);
     let counter = 0;
@@ -31,9 +29,11 @@ hangman.selection = function (wordsInLetters, chosenLetter) {
         hangman.lives = hangman.lives - 1;
         $('.lives-update').html(`${hangman.lives}`);
         $('.wrong-letters').append(`${chosenLetter}`);
+
         if (hangman.lives === 0) {
             alert('YOU LOSE');
-            window.location.reload(true);
+            $('.ltr-btn').unbind('click');
+            $('.guess-btn').unbind('click');
         }
 
     } else if (counter != 0) {
@@ -50,7 +50,7 @@ hangman.selection = function (wordsInLetters, chosenLetter) {
                     $('.answer').append(`<p class="underscore"> _ </p>`);
                 }
         }  if (hangman.correctGuesses === wordsInLetters.length) {
-            console.log('you win!')
+            alert(`you win! The word was ${completeWord}`);
         }
     }
 
@@ -60,15 +60,21 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
     const completeWord = wordsInLetters.join('');
     const uppercaseGuess = textGuess.toUpperCase();
     if (completeWord === uppercaseGuess) {
-        console.log('you win!');
+        alert(`you win! The word was ${completeWord}`);
+        $('.answer').html(`${completeWord}`);
+    } else if (textGuess === '') {
+        alert('please enter a valid guess')
     } else {
         hangman.lives = hangman.lives - 1;
         $('.lives-update').html(`${hangman.lives}`);
         console.log('you lose a life tho')
         if (hangman.lives === 0) {
             alert('YOU LOSEEEE');
+            $('.ltr-btn').unbind('click');
+            $('.guess-btn').unbind('click');
         }
-    }
+    }  
+    
 }
 
 hangman.chosenWord = function() {
@@ -89,14 +95,19 @@ hangman.chosenWord = function() {
 
 hangman.selectedWord = hangman.chosenWord();
 
-
 hangman.guess = function() {
     $('.ltr-btn').click(function (event) {
         event.preventDefault();
         const chosenLetter = $('input[name=letter]:checked').val();
         hangman.guesses.push(chosenLetter);
-        hangman.selection(hangman.selectedWord, chosenLetter);
+        hangman.game(hangman.selectedWord, chosenLetter);
         console.log(hangman.guesses);
+        
+        if ($('input[name=letter]:checked')) {
+            const inputID = $('input[type=radio][name=letter]:checked').attr('id');
+            $('label[for="'+inputID+'"]').fadeOut();
+            $('input[name=letter]:checked').fadeOut();
+        }
     });
 };
 hangman.guess();
