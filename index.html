@@ -21,14 +21,9 @@
 
     </header>
     <main>
+      
         <div class="wrapper">
-            
-            <div class="intro-text">
-                <p class="robot-warning">Robots are taking over the world...</p>
-            </div>
-
-            
-
+         
             <div class="game-container">
                 <div class="hangman-robot">
                     <div class="lives">
@@ -49,16 +44,36 @@
                     <div class="evil-robot">
                         <img src="assets/evil-robot-full.png" alt="">
                     </div>
+                    <div class="guess-word">
+                        <form id="form">
+                            <div class="guess-text-area">
+                                <label for="guess-text" class="visuallyHidden">Know the Word? Guess Here and Press Submit</label>
+                                <input type="text" class="guess-text" id="guess-text" name="guess-text" required="true"
+                                    placeholder="Know the Word? Type Your Guess Here">
+                            </div>
+                    
+                            <div class="guess-submit">
+                                <label for="guess-btn" class="visuallyHidden" id="guess-btn">Click to guess word!</label>
+                                <button class="guess-btn" type="submit" id="guess-btn">GUESS THE WORD!</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
 
                 <div class="game">
                     <div class="mission">
                         <h3>Your Mission</h3>
+                        <p class="robot-warning">Robots are taking over the world...<span class="underscore-animation">_ </span></p>
                         <p> Guess the word by selecting one letter at a time and pressing the "Guess A Letter" button.</p>
                         <p>If you know the word, you can guess the word by typing it in the box.</p>
-                        <p>GUESS the word before the robot is fully built, because if the robot is built it will turn into a <span>KILLER</span> robot!</p>
+                        <p>GUESS the word before the robot is fully built, because if the robot is built it will turn into a <span class="red-killer">KILLER</span> robot!</p>
                     </div>
+
+                    <div class="final-message">
+
+                    </div>
+
                     <div class="answer">
                         <div class="show-letter"></div>
                     </div>
@@ -234,22 +249,9 @@
                     </div>
                     
                     <div class="wrong-letters">
-                        <h4>Wrong Letters</h4>
+                        <h4>Wrong Letters:</h4>
                     </div>
 
-                    <div class="guess-word">
-                        <form id="form">
-                            <div class="guess-text-area">
-                                <label for="guess-text" class="visuallyHidden">Know the Word? Guess Here and Press Submit</label>
-                                <input type="text" class="guess-text" id="guess-text" name="guess-text" required="true" placeholder="Type Your Guess Here">
-                            </div>
-
-                            <div class="guess-submit">
-                                <label for="guess-btn" class="visuallyHidden" id="guess-btn">Click to guess word!</label>
-                                <button class="guess-btn" type="submit" id="guess-btn">GUESS WORD!</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
 
             </div>

@@ -49,6 +49,7 @@ body {
         span.killer-text {
             font-family: 'Nosifer', cursive;
             color: #B03030;
+            // color: black;
         }
     }
     h2 {
@@ -64,17 +65,7 @@ body {
     width: 90%;
     margin: 0 auto;
     margin-top: 5%;
-    .intro-text {
-        text-align: center;
-        font-family: 'Source Code Pro', monospace;
-        margin-bottom: 3%;
-        text-transform: uppercase;
-        .robot-warning {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-        }
-    }
+
 }
 
 
@@ -84,20 +75,33 @@ body {
     padding: 2%;
     border: 1px dashed white;
     text-align: center;
+    .robot-warning {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        .underscore-animation {
+            font-size: 0.6rem;
+        }
+    }
     h3 {
         font-family: 'Press Start 2P', cursive;
         font-size: 0.8rem;
         color: #00ff00;
         letter-spacing: 2px;
+        text-transform: uppercase;
     }
     p {
         font-size: 0.9rem;
         letter-spacing: 1.5px;
+        .underscore-animation {
+            color: #00ff00;
+        }
     }
-    span {
-        color: #B03030;
-        font-size: 1.1rem;
-    }
+}
+
+.red-killer {
+    color: #B03030;
+    font-size: 1.1rem;
 }
 
 .game-container {
@@ -126,6 +130,7 @@ body {
 .hangman-robot {
     width: 40%;
     border: 2px solid white;
+    position: relative;
     .claw-container {
         width: 75px;
         margin: 0 auto;
@@ -148,6 +153,18 @@ body {
             width: 300px;
         }
     }
+    .guess-word {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        padding-bottom: 20px;
+        .guess-text-area {
+            text-align: center;
+        }
+
+    }
 }
 
 .evil-robot {
@@ -162,14 +179,14 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 0.8rem;
     .lives-update {
-        color: #B03030;
+        color:#00ff00;
         font-size: 1.2rem;
     }
 }
 
 .letters-box {
     display: flex;
-    width: 55%;
+    width: 500px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 5%;
@@ -196,6 +213,7 @@ body {
         font-family: 'Press Start 2P', cursive;
         font-size: 0.8rem;
         padding: 10px 0;
+        text-transform: uppercase;
     }
 }
 
@@ -204,7 +222,9 @@ form.letters-box input {
 }
 
 .letters-box input:checked + label {
-    color: #B03030;
+    // color: #B03030;
+    color: #00ff00;
+
     margin: 2px;
 }
 
@@ -221,7 +241,7 @@ form.letters-box input {
     .guess-submit {
         text-align: center;
         button {
-            width: 200px;
+            width: 250px;
         }
     }
 }
