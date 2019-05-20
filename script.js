@@ -45,13 +45,14 @@ hangman.game = function (wordsInLetters, chosenLetter) {
         if (hangman.lives === 0) {
             $('.right-leg').hide();
             $('.right-left-leg').show();
-            $('.final-message').html(`
+            
+            $('.final-message').show().html(`
 
-            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was  ${completeWord}. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
+            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
 
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-                <input class="play-again" id="restart" type="reset" value="Click Here to Try Again!">
+                <input class="play-again" id="restart" type="reset" value="Click to Try Again!">
             </div>
             
             `);
@@ -61,8 +62,10 @@ hangman.game = function (wordsInLetters, chosenLetter) {
             });
             $('.robot-container').hide()
             $('.evil-robot').show();
-            $('.ltr-btn').unbind('click');
-            $('.guess-btn').unbind('click');
+            $('.guess-word').fadeOut();
+            $('.letters-box').fadeOut('slow');
+            $('.submit-ltr-guess').fadeOut('slow');
+            $('.wrong-letters').fadeOut('slow');
         } else if (hangman.lives === 5) {
             $('.head').show();
         } else if (hangman.lives === 4) {
@@ -94,13 +97,13 @@ hangman.game = function (wordsInLetters, chosenLetter) {
                     $('.answer').append(`<p class="underscore"> _ </p>`);
                 }
         }  if (hangman.correctGuesses === wordsInLetters.length) {
-            $('.final-message').html(`
+            $('.final-message').show().html(`
 
-            <p>Yay! CONGRATULATIONS! You guessed the word and saved the world from the <span class="red-killer">KILLER</span> robot!</p>
+            <p>You Are Correct! CONGRATULATIONS!<br> You guessed the word and saved the world from the <span class="red-killer">KILLER</span> robot!</p>
         
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-                <input class="play-again" id="restart" type="reset" value="Click Here to Play Again!">
+                <input class="play-again" id="restart" type="reset" value="Click to Play Again!">
             </div>
 
             `);
@@ -108,6 +111,10 @@ hangman.game = function (wordsInLetters, chosenLetter) {
                 window.location.reload(true);
                 alert('clicked');
             });
+            $('.guess-word').fadeOut();
+            $('.letters-box').fadeOut('slow');
+            $('.submit-ltr-guess').fadeOut('slow');
+            $('.wrong-letters').fadeOut('slow');
             $('.answer').html(`${completeWord}`);
         }
     }
@@ -119,13 +126,13 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
     const completeWord = wordsInLetters.join('');
     const uppercaseGuess = textGuess.toUpperCase();
     if (completeWord === uppercaseGuess) {
-        $('.final-message').html(`
+        $('.final-message').show().html(`
 
-        <p>Yay! CONGRATULATIONS! <br>You guessed the word and saved the world from the <span class="red-killer">KILLER</span> robot!</p>
+        <p>You Are Correct! CONGRATULATIONS!<br> You guessed the word and saved the world from the <span class="red-killer">KILLER</span> robot!</p>
 
         <div class="restart-btn">
-            <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-            <input class="play-again" id="restart" type="reset" value="Click Here to Play Again!">
+            <label for="play-again" class="visuallyHidden" id="try-again-btn">Click to play again!</label>
+            <input class="play-again" id="restart" type="reset" value="Click to Play Again!">
         </div>
 
         `);
@@ -133,6 +140,10 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             window.location.reload(true);
             alert('clicked');
         });
+        $('.guess-word').fadeOut();
+        $('.letters-box').fadeOut('slow');
+        $('.submit-ltr-guess').fadeOut('slow');
+        $('.wrong-letters').fadeOut('slow');
         $('.answer').html(`${completeWord}`);
     } else if (textGuess === '') {
         alert('Please type in a valid guess')
@@ -149,13 +160,13 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
         if (hangman.lives === 0) {
             $('.right-leg').hide();
             $('.right-left-leg').show();
-            $('.final-message').html(`
+            $('.final-message').show().html(`
 
-            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was  ${completeWord}. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
+            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
 
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-                <input class="play-again" id="restart" type="reset" value="Click Here to Try Again!>
+                <input class="play-again" id="restart" type="reset" value="Click to Try Again!>
             </div>
             `);
             $('.restart-btn').click(function () {
@@ -164,8 +175,10 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             });
             $('.robot-container').hide()
             $('.evil-robot').show();
-            $('.ltr-btn').unbind('click');
-            $('.guess-btn').unbind('click');
+            $('.guess-word').fadeOut();
+            $('.letters-box').fadeOut('slow');
+            $('.submit-ltr-guess').fadeOut('slow');
+            $('.wrong-letters').fadeOut('slow');
 
         } else if (hangman.lives === 5) {
             $('.head').show();
