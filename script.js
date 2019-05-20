@@ -32,26 +32,27 @@ hangman.game = function (wordsInLetters, chosenLetter) {
 
         if (hangman.lives === 0) {
             $('.right-leg').hide();
-            $('.left-leg').show();
+            $('.right-left-leg').show();
             alert(`YOU LOSE, the word was ${completeWord}`);
+            $('.robot-container').hide()
+            $('.evil-robot').show();
             $('.ltr-btn').unbind('click');
             $('.guess-btn').unbind('click');
         } else if (hangman.lives === 5) {
             $('.head').show();
-            console.log('5')
         } else if (hangman.lives === 4) {
-            $('.body').show();
+            $('.robot-body').show();
         } else if (hangman.lives === 3) {
-            $('.body').hide();
+            $('.robot-body').hide();
             $('.right-arm').show();
         } else if (hangman.lives === 2) {
             $('.right-arm').hide();
-            $('.left-arm').show();
+            $('.both-arms').show();
         } else if (hangman.lives === 1) {
             $('.right-leg').show();
         } else if (hangman.lives === 0) {
             $('.right-leg').hide();
-            $('.left-leg').show();
+            $('.right-left-leg').show();
         }
 
     } else if (counter != 0) {
@@ -88,8 +89,10 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
         console.log('you lose a life tho')
         if (hangman.lives === 0) {
             $('.right-leg').hide();
-            $('.left-leg').show();
+            $('.right-left-leg').show();
             alert(`YOU LOSE, the word was ${completeWord}`);
+            $('.robot-container').hide()
+            $('.evil-robot').show();
             $('.ltr-btn').unbind('click');
             $('.guess-btn').unbind('click');
         }

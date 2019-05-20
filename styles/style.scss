@@ -35,7 +35,7 @@ body {
 
 .header-title {
     text-align: center;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     h1 {
         font-family: 'Bungee Shade', cursive;
         font-size: 3rem;
@@ -63,17 +63,15 @@ body {
 .wrapper {
     width: 90%;
     display: flex;
-    border: 1px solid black;
     margin: 0 auto;
 }
 
 .game {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 1px solid blue;
+    height: 800px;
     font-family: 'Source Code Pro', monospace;
     .intro-text {
         text-align: center;
@@ -88,62 +86,47 @@ body {
 }
 
 .hangman-robot {
-    width: 50%;
-    border: 1px solid orange;
+    width: 40%;
+    border: 2px solid white;
+    .claw-container {
+        width: 75px;
+        margin: 0 auto;
+    }
     .robot-container {
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .claw {
-            width: 15%;
-        }
-        .robot {
+        img {
             display: none;
+            width: 100%;
+            height: auto;
         }
         .head {
             width: 250px;
         }
-        
-        .robot img {
-            width: 100%;
-            height: auto;
+        .robot-body,
+        .body {
+            width: 350px;
         }
     }
 }
 
-.body-container {
-    overflow: hidden;
-    width: 300px;
-    .right-arm {
-        width: 100%;
-        height: 100%;
-        // display: block;
-    }
-    .left-arm {
-        width: 100%;
-        height: 100%;
-        // display: block;
-    }
-    .body {
-        width: 100%;
-        height: 100%;
-        // display: block;
-    }
-}
-
-.legs-container {
-    .left-leg {
-        width: 300px;
-    }
-    .right-leg {
-        width: 300px;
-    }
+.evil-robot {
+    display: none;
+    width: 350px;
+    margin: 0 auto;
 }
 
 .lives {
     margin-top: 5%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    .lives-update {
+        color: #B03030;
+        font-size: 1.2rem;
+    }
 }
 
 .letters-box {

@@ -204,7 +204,7 @@ body {
     *******************/
 .header-title {
   text-align: center;
-  margin-bottom: 3%; }
+  margin-bottom: 5%; }
   .header-title h1 {
     font-family: 'Bungee Shade', cursive;
     font-size: 3rem;
@@ -229,11 +229,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid black;
   margin: 0 auto; }
 
 .game {
-  width: 50%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,13 +240,10 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid blue;
+  height: 800px;
   font-family: 'Source Code Pro', monospace; }
   .game .intro-text {
     text-align: center; }
@@ -258,10 +254,12 @@ body {
     display: inline; }
 
 .hangman-robot {
-  width: 50%;
-  border: 1px solid orange; }
+  width: 40%;
+  border: 2px solid white; }
+  .hangman-robot .claw-container {
+    width: 75px;
+    margin: 0 auto; }
   .hangman-robot .robot-container {
-    border: 1px solid red;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -275,37 +273,29 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .hangman-robot .robot-container .claw {
-      width: 15%; }
-    .hangman-robot .robot-container .robot {
-      display: none; }
-    .hangman-robot .robot-container .head {
-      width: 250px; }
-    .hangman-robot .robot-container .robot img {
+    .hangman-robot .robot-container img {
+      display: none;
       width: 100%;
       height: auto; }
+    .hangman-robot .robot-container .head {
+      width: 250px; }
+    .hangman-robot .robot-container .robot-body,
+    .hangman-robot .robot-container .body {
+      width: 350px; }
 
-.body-container {
-  overflow: hidden;
-  width: 300px; }
-  .body-container .right-arm {
-    width: 100%;
-    height: 100%; }
-  .body-container .left-arm {
-    width: 100%;
-    height: 100%; }
-  .body-container .body {
-    width: 100%;
-    height: 100%; }
-
-.legs-container .left-leg {
-  width: 300px; }
-
-.legs-container .right-leg {
-  width: 300px; }
+.evil-robot {
+  display: none;
+  width: 350px;
+  margin: 0 auto; }
 
 .lives {
-  margin-top: 5%; }
+  margin-top: 5%;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem; }
+  .lives .lives-update {
+    color: #B03030;
+    font-size: 1.2rem; }
 
 .letters-box {
   display: -webkit-box;
