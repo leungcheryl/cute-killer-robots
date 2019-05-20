@@ -38,7 +38,7 @@ body {
     margin-bottom: 5%;
     h1 {
         font-family: 'Bungee Shade', cursive;
-        font-size: 3rem;
+        font-size: 3.2rem;
         margin-bottom: 0;
         color: #68B5BE;
         span.cute-text {
@@ -62,8 +62,46 @@ body {
 
 .wrapper {
     width: 90%;
-    display: flex;
     margin: 0 auto;
+    margin-top: 5%;
+    .intro-text {
+        text-align: center;
+        font-family: 'Source Code Pro', monospace;
+        margin-bottom: 3%;
+        text-transform: uppercase;
+        .robot-warning {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+
+.mission {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2%;
+    border: 1px dashed white;
+    text-align: center;
+    h3 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 0.8rem;
+        color: #00ff00;
+        letter-spacing: 2px;
+    }
+    p {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+    span {
+        color: #B03030;
+        font-size: 1.1rem;
+    }
+}
+
+.game-container {
+    display: flex;
 }
 
 .game {
@@ -73,13 +111,13 @@ body {
     align-items: center;
     height: 800px;
     font-family: 'Source Code Pro', monospace;
-    .intro-text {
-        text-align: center;
-    }
+    margin-left: 30px;
 }
 
 .answer {
-    margin-bottom: 5%;
+    margin-top: 7%;
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
     p.underscore {
         display: inline;
     }
@@ -103,18 +141,18 @@ body {
             height: auto;
         }
         .head {
-            width: 250px;
+            width: 200px;
         }
         .robot-body,
         .body {
-            width: 350px;
+            width: 300px;
         }
     }
 }
 
 .evil-robot {
     display: none;
-    width: 350px;
+    width: 300px;
     margin: 0 auto;
 }
 
@@ -131,4 +169,59 @@ body {
 
 .letters-box {
     display: flex;
+    width: 55%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    .letter-container {
+        height: 60px;
+        p {
+            font-size: 1.5rem;
+            padding: 0 10px;
+            margin: 0;
+        }
+    }
+}
+
+.wrong-letters {
+    border: 2px solid white;
+    width: 50%;
+    background-color: grey;
+    text-align: center;
+    margin: 2%;
+    font-size: 1.3rem;
+    h4 {
+        margin: 0;
+        color: black;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+}
+
+form.letters-box input {
+	visibility: hidden;
+}
+
+.letters-box input:checked + label {
+    color: #B03030;
+    margin: 2px;
+}
+
+.guess-word {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    .guess-text-area input {
+        width: 400px;
+        height: 50px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .guess-submit {
+        text-align: center;
+        button {
+            width: 200px;
+        }
+    }
 }

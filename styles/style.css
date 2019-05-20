@@ -207,7 +207,7 @@ body {
   margin-bottom: 5%; }
   .header-title h1 {
     font-family: 'Bungee Shade', cursive;
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 0;
     color: #68B5BE; }
     .header-title h1 span.cute-text {
@@ -226,10 +226,40 @@ body {
 
 .wrapper {
   width: 90%;
+  margin: 0 auto;
+  margin-top: 5%; }
+  .wrapper .intro-text {
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 3%;
+    text-transform: uppercase; }
+    .wrapper .intro-text .robot-warning {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.9rem;
+      letter-spacing: 2px; }
+
+.mission {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2%;
+  border: 1px dashed white;
+  text-align: center; }
+  .mission h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #00ff00;
+    letter-spacing: 2px; }
+  .mission p {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px; }
+  .mission span {
+    color: #B03030;
+    font-size: 1.1rem; }
+
+.game-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto; }
+  display: flex; }
 
 .game {
   width: 60%;
@@ -244,12 +274,13 @@ body {
   -ms-flex-align: center;
   align-items: center;
   height: 800px;
-  font-family: 'Source Code Pro', monospace; }
-  .game .intro-text {
-    text-align: center; }
+  font-family: 'Source Code Pro', monospace;
+  margin-left: 30px; }
 
 .answer {
-  margin-bottom: 5%; }
+  margin-top: 7%;
+  font-size: 1.5rem;
+  font-family: 'Press Start 2P', cursive; }
   .answer p.underscore {
     display: inline; }
 
@@ -278,14 +309,14 @@ body {
       width: 100%;
       height: auto; }
     .hangman-robot .robot-container .head {
-      width: 250px; }
+      width: 200px; }
     .hangman-robot .robot-container .robot-body,
     .hangman-robot .robot-container .body {
-      width: 350px; }
+      width: 300px; }
 
 .evil-robot {
   display: none;
-  width: 350px;
+  width: 300px;
   margin: 0 auto; }
 
 .lives {
@@ -300,4 +331,57 @@ body {
 .letters-box {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 55%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 5%; }
+  .letters-box .letter-container {
+    height: 60px; }
+    .letters-box .letter-container p {
+      font-size: 1.5rem;
+      padding: 0 10px;
+      margin: 0; }
+
+.wrong-letters {
+  border: 2px solid white;
+  width: 50%;
+  background-color: grey;
+  text-align: center;
+  margin: 2%;
+  font-size: 1.3rem; }
+  .wrong-letters h4 {
+    margin: 0;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 10px 0; }
+
+form.letters-box input {
+  visibility: hidden; }
+
+.letters-box input:checked + label {
+  color: #B03030;
+  margin: 2px; }
+
+.guess-word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 35px; }
+  .guess-word .guess-text-area input {
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 15px; }
+  .guess-word .guess-submit {
+    text-align: center; }
+    .guess-word .guess-submit button {
+      width: 200px; }
