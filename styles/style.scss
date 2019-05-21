@@ -274,6 +274,7 @@ body {
 .ltr-btn {
     border: none;
     padding: 5px 15px;
+    background-color: $white;
     &:hover {
         font-weight: 500;
         transition: 0.2s all ease;

@@ -763,7 +763,8 @@ body {
 
 .ltr-btn {
   border: none;
-  padding: 5px 15px; }
+  padding: 5px 15px;
+  background-color: #F2EEF2; }
   .ltr-btn:hover {
     font-weight: 500;
     -webkit-transition: 0.2s all ease;
