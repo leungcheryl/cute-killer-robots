@@ -294,8 +294,8 @@ form.letters-box input {
         margin: 0;
         color: $background;
         font-family: $font-header;
-        font-size: 0.8rem;
-        padding: 10px 0;
+        font-size: 0.7rem;
+        padding: 10px 5px;
         text-transform: uppercase;
     }
 }
@@ -466,8 +466,11 @@ form.letters-box input {
             .game {
                 width: 100%;
                 margin-left: 0;
-                height: 550px;
+                height: 610px;
                 border: 2px solid $white;
+                .wrong-letters {
+                    padding: 0 15px;
+                }
             }
             .hangman-robot {
                 width: 100%;
