@@ -2,7 +2,7 @@
 		A N I M A T I O N
 		S T Y L E S  
     *********************/
-    
+
 .claw{-webkit-animation:claw 2.5s 3.5s infinite both;animation:claw 2.5s 3.5s infinite both;
 }
 
@@ -13,11 +13,11 @@
   font-weight: 100;
   font-size: 30px;
   color: #2E3D48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
+  -webkit-animation: 1.5s blink step-end infinite;
+  -moz-animation: 1.5s blink step-end infinite;
+  -ms-animation: 1.5s blink step-end infinite;
+  -o-animation: 1.5s blink step-end infinite;
+  animation: 1.5s blink step-end infinite;
 }
 
 @keyframes "blink" {

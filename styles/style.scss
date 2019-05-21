@@ -165,12 +165,13 @@ body {
     width: 90%;
     margin: 0 auto;
     padding: 2%;
-    border: 1px dashed white;
+    border: 1px dashed $white;
     text-align: center;
     .robot-warning {
         font-family: $font-header;
         font-size: 0.8rem;
         letter-spacing: 2px;
+        text-align: center;
     }
     h3 {
         font-family: $font-header;
@@ -182,13 +183,20 @@ body {
     p {
         font-size: 0.9rem;
         letter-spacing: 1.5px;
+        text-align: left;
+        padding-left: 2%;
+        line-height: 1.3;
         .underscore-animation {
             font-size: 0.8rem;
             color: $secondary-color;
+            font-weight: 700;
         }
     }
 }
 
+.killer-txt {
+    font-weight: 700;
+}
 .red-killer {
     color: $accent-color;
     font-size: 0.9rem;
@@ -307,7 +315,7 @@ form.letters-box input {
     *******************/
 
     .foot-text {
-        margin-top: 6%;
+        margin: 6% 0 1%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -317,7 +325,7 @@ form.letters-box input {
         font-size: 0.8rem;
         }  
         .credits {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #bababa;
         }
     }
@@ -378,7 +386,7 @@ form.letters-box input {
                 }
             }
             h2 {
-                font-size: 0.6rem;
+                font-size: 0.8rem;
             }
         }
         .lives {
