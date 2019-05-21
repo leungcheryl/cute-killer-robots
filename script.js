@@ -50,7 +50,7 @@ hangman.game = function (wordsInLetters, chosenLetter) {
             <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
 
             <div class="restart-btn">
-                <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
+                <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to try again</label>
                 <input class="play-again" id="restart" type="reset" value="Try Again">
             </div>
             
@@ -98,7 +98,7 @@ hangman.game = function (wordsInLetters, chosenLetter) {
             <p>You Are Correct! CONGRATULATIONS!<br> You guessed the word and saved the world from the <span class="red-killer">KILLER</span> robot!</p>
         
             <div class="restart-btn">
-                <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
+                <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again</label>
                 <input class="play-again" id="restart" type="reset" value="Play Again">
             </div>
 
@@ -126,7 +126,7 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
         <p>You Are Correct! CONGRATULATIONS!<br> You guessed the word and saved the world from the <span class="red-killer">KILLER</span> robot!</p>
 
         <div class="restart-btn">
-            <label for="play-again" class="visuallyHidden" id="try-again-btn">Click to play again!</label>
+            <label for="play-again" class="visuallyHidden" id="try-again-btn">Click to play again</label>
             <input class="play-again" id="restart" type="reset" value="Play Again">
         </div>
 
@@ -159,7 +159,7 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
 
             <div class="restart-btn">
-                <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
+                <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to try again</label>
                 <input class="play-again" id="restart" type="reset" value="Try Again">
             </div>
             `);
