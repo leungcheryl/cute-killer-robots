@@ -47,7 +47,7 @@ hangman.game = function (wordsInLetters, chosenLetter) {
             
             $('.final-message').show().html(`
 
-            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
+            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot turned into a <span class="red-killer">KILLER</span> robot!</p>
 
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to try again</label>
@@ -156,7 +156,7 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             $('.right-left-leg').show();
             $('.final-message').show().html(`
 
-            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot is turning into a <span class="red-killer">KILLER</span> robot!</p>
+            <p>Oh no! The robot is fully built because you couldn't guess the word! The word was <span class="answer-color">${completeWord}</span>. The cute robot turned into a <span class="red-killer">KILLER</span> robot!</p>
 
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to try again</label>
