@@ -1,5 +1,4 @@
 @import "partials/_setup.scss";
-@import "partials/_mixins.scss";
 @import "partials/_variables.scss";
 @import "partials/_animations.scss";
 
@@ -344,6 +343,9 @@ form.letters-box input {
         }
     }
 
+    .back-btn {
+        text-align: center;
+    }
 
    /******************
         M E D I A
@@ -426,7 +428,9 @@ form.letters-box input {
     }
 
      @media (max-width: 676px) {
-
+        .header-title h1 {
+            margin-bottom: 5%;
+        }
         .game-container {
             flex-direction: column;
             .game {
@@ -441,12 +445,4 @@ form.letters-box input {
                 margin-bottom: 5%;
             }
         }
-     }
-
-     @media (max-width: 602px) {
-
-        .header-title h1 {
-            margin-bottom: 5%;
-        }
-
      }

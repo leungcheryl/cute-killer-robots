@@ -1,10 +1,8 @@
-
-
-// .claw{-webkit-animation:claw 2s cubic-bezier(.25,.46,.45,.94) both;animation:claw 2s cubic-bezier(.25,.46,.45,.94) both}
-
-
-// @-webkit-keyframes claw{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes claw{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
-
+   /**********************
+		A N I M A T I O N
+		S T Y L E S  
+    *********************/
+    
 .claw{-webkit-animation:claw 2.5s 3.5s infinite both;animation:claw 2.5s 3.5s infinite both;
 }
 

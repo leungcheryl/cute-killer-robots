@@ -148,6 +148,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   -webkit-font-smoothing: antialiased; }
 
+/**********************
+		A N I M A T I O N
+		S T Y L E S  
+    *********************/
 .claw {
   -webkit-animation: claw 2.5s 3.5s infinite both;
   animation: claw 2.5s 3.5s infinite both; }
@@ -813,6 +817,9 @@ form.letters-box input {
       letter-spacing: 1px;
       color: #68B5BE; }
 
+.back-btn {
+  text-align: center; }
+
 /******************
         M E D I A
         Q U E R I E S  
@@ -859,6 +866,8 @@ form.letters-box input {
     width: 80%; } }
 
 @media (max-width: 676px) {
+  .header-title h1 {
+    margin-bottom: 5%; }
   .game-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -873,7 +882,3 @@ form.letters-box input {
       width: 100%;
       height: 725px;
       margin-bottom: 5%; } }
-
-@media (max-width: 602px) {
-  .header-title h1 {
-    margin-bottom: 5%; } }
