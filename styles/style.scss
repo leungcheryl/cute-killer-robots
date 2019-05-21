@@ -23,7 +23,7 @@ a {
 }
 
 body {
-    background-color: #10110C;
+    background-color: $background;
     color: white;
 }
 
@@ -39,7 +39,7 @@ body {
         font-family: 'Bungee Shade', cursive;
         font-size: 3.2rem;
         margin: 0;
-        color: #68B5BE;
+        color: $primary-color;
         span.cute-text {
             font-family: 'Meddon', cursive;
             font-size: 3.5rem;
@@ -48,12 +48,12 @@ body {
         span.killer-text,
         span.killer-two-text {
             font-family: 'Nosifer', cursive;
-            color: #B03030;
+            color: $accent-color;
         }
     }
     h2 {
         margin-top: 0;
-        font-family: 'Press Start 2P', cursive;
+        font-family: $font-header;
         text-transform: uppercase;
         letter-spacing: 4px;
         font-size: 0.9rem;
@@ -66,7 +66,7 @@ body {
 
 .hangman-robot {
     width: 40%;
-    border: 2px solid white;
+    border: 2px solid $white;
     position: relative;
     .claw-container {
         width: 75px;
@@ -98,7 +98,7 @@ body {
         width: 100%;
         flex-direction: column;
         padding: 35px 0 20px;
-        font-family: 'Source Code Pro', monospace;
+        font-family: $font-stack;
         .guess-text-area {
             text-align: center;
         }
@@ -117,7 +117,15 @@ body {
     text-align: center;
     button {
         width: 250px;
-        padding: 3px;
+        background-color: $accent-color;
+        border: none;
+        color: $white;
+        padding: 5px 15px;
+        &:hover {
+            font-weight: 500;
+            transition: 0.2s all ease;
+            border: 1.5px solid $white;
+        }
     }
 }
 
@@ -130,10 +138,10 @@ body {
 .lives {
     margin-top: 5%;
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
+    font-family: $font-header;
     font-size: 0.8rem;
     .lives-update {
-        color:#00ff00;
+        color: $secondary-color;
         font-size: 1.2rem;
     }
 }
@@ -160,17 +168,14 @@ body {
     border: 1px dashed white;
     text-align: center;
     .robot-warning {
-        font-family: 'Press Start 2P', cursive;
+        font-family: $font-header;
         font-size: 0.8rem;
         letter-spacing: 2px;
-        .underscore-animation {
-            font-size: 0.6rem;
-        }
     }
     h3 {
-        font-family: 'Press Start 2P', cursive;
+        font-family: $font-header;
         font-size: 0.8rem;
-        color: #00ff00;
+        color: $secondary-color;
         letter-spacing: 2px;
         text-transform: uppercase;
     }
@@ -178,14 +183,15 @@ body {
         font-size: 0.9rem;
         letter-spacing: 1.5px;
         .underscore-animation {
-            color: #00ff00;
+            font-size: 0.8rem;
+            color: $secondary-color;
         }
     }
 }
 
 .red-killer {
-    color: #B03030;
-    font-size: 1rem;
+    color: $accent-color;
+    font-size: 0.9rem;
 }
 
 .final-message {
@@ -194,21 +200,21 @@ body {
     margin: 40px 0 20px;
     text-align: center;
     background-color: grey;
-    border: 3px solid white;
-    color: black;
+    border: 3px solid $white;
+    color: $background;
     padding: 2% 3%;
     p {
-        font-family: 'Press Start 2P', cursive;
+        font-family: $font-header;
         letter-spacing: 2px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         line-height: 1.8;
         .answer-color {
-            color: white;
+            color: $white;
         }
     }
     
     .restart-btn {
-        font-family: 'Source Code Pro', monospace;
+        font-family: $font-stack;
         padding-bottom: 12px;
         
         input {
@@ -228,15 +234,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 725px;
-    font-family: 'Source Code Pro', monospace;
+    height: 750px;
+    font-family: $font-stack;
     margin-left: 30px;
 }
 
 .answer {
     margin-top: 5%;
-    font-size: 1.5rem;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    font-family: $font-header;
     p.underscore {
         display: inline;
     }
@@ -257,33 +263,43 @@ body {
         }
     }
 }
+    
+.ltr-btn {
+    border: none;
+    padding: 5px 15px;
+    &:hover {
+        font-weight: 500;
+        transition: 0.2s all ease;
+        color: rgb(94, 93, 93);
+    }
+}
 
 form.letters-box input {
 	visibility: hidden;
 }
 
 .letters-box input:checked + label {
-    color: #00ff00;
+    color: $secondary-color;
     margin: 2px;
 }
 
 .wrong-letters {
-    border: 2px solid white;
+    border: 2px solid $white;
     width: 50%;
     background-color: grey;
     text-align: center;
     margin: 30px;
     font-size: 1.3rem;
+    letter-spacing: 1px;
     h4 {
         margin: 0;
-        color: black;
-        font-family: 'Press Start 2P', cursive;
+        color: $background;
+        font-family: $font-header;
         font-size: 0.8rem;
         padding: 10px 0;
         text-transform: uppercase;
     }
 }
-
 
 
    /******************
@@ -292,22 +308,23 @@ form.letters-box input {
     *******************/
 
     .foot-text {
-        margin-top: 5%;
+        margin-top: 6%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         p {
-        font-family: 'Source Code Pro', monospace;
+        font-family: $font-stack;
         margin: 0;
+        font-size: 0.8rem;
         }  
         .credits {
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             color: #bababa;
         }
     }
 
     .foot-text a {
-        color: white;
+        color: $white;
         text-transform: uppercase;
         &:hover {
             letter-spacing: 2px;
@@ -325,20 +342,20 @@ form.letters-box input {
         width: 70%;
         .credit-container {
             h2 {
-            font-family: 'Press Start 2P', cursive;
+            font-family: $font-stack;
             font-size: 1.2rem; 
             }
             p {
-                font-family: 'Source Code Pro', monospace;
+                font-family: $font-stack;
                 margin-bottom: 6%;
             }
         }
         a {
             color: grey;
-            font-family: 'Source Code Pro', monospace;
+            font-family: $font-stack;
             &:hover {
                 letter-spacing: 1px;
-                color: #68B5BE;
+                color: $primary-color;
             }
         }
     }
@@ -385,7 +402,17 @@ form.letters-box input {
         .foot-text {
             margin-top: 15%;
         }
-        
+
+        .submit-ltr-guess {
+            margin-top: 2%;
+        }
+
+        .hangman-robot {
+            height: 825px;
+        }
+        .letters-box {
+            width: 400px;
+        }
     } 
 
     @media (max-width: 834px) {
@@ -394,7 +421,7 @@ form.letters-box input {
         }
         .mission-mobile {
             display: block;
-            font-family: 'Source Code Pro', monospace;
+            font-family: $font-stack;
             margin-bottom: 5%;
         }
 
@@ -425,6 +452,10 @@ form.letters-box input {
             }
         }
 
+        .hangman-robot {
+            height: 700px;
+        }
+
     }
 
      @media (max-width: 676px) {
@@ -437,7 +468,7 @@ form.letters-box input {
                 width: 100%;
                 margin-left: 0;
                 height: 550px;
-                border: 2px solid white;
+                border: 2px solid $white;
             }
             .hangman-robot {
                 width: 100%;

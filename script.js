@@ -105,7 +105,6 @@ hangman.game = function (wordsInLetters, chosenLetter) {
             `);
             $('.restart-btn').click(function () {
                 window.location.reload(true);
-                alert('clicked');
             });
             $('.guess-word').hide();
             $('.letters-box').hide();
@@ -134,7 +133,6 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
         `);
         $('.restart-btn').click(function () {
             window.location.reload(true);
-            alert('clicked');
         });
         $('.guess-word').hide();
         $('.letters-box').hide();
@@ -148,9 +146,9 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
         $('.lives-update').html(`${hangman.lives}`);
 
         if (hangman.lives >= 2) {
-            alert(`Your guess was not correct - you only have ${hangman.lives} robot parts left until the robot becomes a killer robot!`)
+            alert(`Your guess was incorrect - you only have ${hangman.lives} robot parts left until the robot becomes a killer robot!`)
         } else if (hangman.lives === 1) {
-            alert(`Your guess was not correct - you only have ${hangman.lives} robot part left until the robot becomes a killer robot!`)
+            alert(`Your guess was incorrect - you only have ${hangman.lives} robot part left until the robot becomes a killer robot!`)
         }
 
         if (hangman.lives === 0) {
@@ -167,7 +165,6 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             `);
             $('.restart-btn').click(function () {
                 window.location.reload(true);
-                alert('clicked');
             });
             $('.robot-container').hide()
             $('.evil-robot').show();
@@ -214,8 +211,6 @@ hangman.chosenWord = function() {
 
 hangman.selectedWord = hangman.chosenWord();
 
-
-
 hangman.finalGuess = function() {
 
     $('.guess-btn').click(function(event) {
@@ -238,7 +233,7 @@ $(document).ready(function () {
             hangman.game(hangman.selectedWord, chosenLetter);
 
             if (chosenLetter === undefined) {
-                alert('Please select a letter and press the Guess a Letter button')
+                alert(`Please select a letter and press the "Guess a Letter" button`)
             }
 
             if ($('input[name=letter]:checked')) {
