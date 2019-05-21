@@ -538,7 +538,8 @@ body {
       font-family: 'Meddon', cursive;
       font-size: 3.5rem;
       color: white; }
-    .header-title h1 span.killer-text {
+    .header-title h1 span.killer-text,
+    .header-title h1 span.killer-two-text {
       font-family: 'Nosifer', cursive;
       color: #B03030; }
   .header-title h2 {
@@ -548,90 +549,10 @@ body {
     letter-spacing: 4px;
     font-size: 0.9rem; }
 
-.wrapper {
-  width: 90%;
-  margin: 0 auto; }
-
-.mission {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2%;
-  border: 1px dashed white;
-  text-align: center; }
-  .mission .robot-warning {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.8rem;
-    letter-spacing: 2px; }
-    .mission .robot-warning .underscore-animation {
-      font-size: 0.6rem; }
-  .mission h3 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.8rem;
-    color: #00ff00;
-    letter-spacing: 2px;
-    text-transform: uppercase; }
-  .mission p {
-    font-size: 0.9rem;
-    letter-spacing: 1.5px; }
-    .mission p .underscore-animation {
-      color: #00ff00; }
-
-.red-killer {
-  color: #B03030;
-  font-size: 1rem; }
-
-.final-message {
-  display: none;
-  width: 80%;
-  margin: 40px 0 20px;
-  text-align: center;
-  background-color: grey;
-  border: 3px solid white;
-  color: black;
-  padding: 2% 3%; }
-  .final-message p {
-    font-family: 'Press Start 2P', cursive;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    line-height: 1.8; }
-    .final-message p .answer-color {
-      color: white; }
-  .final-message .restart-btn {
-    font-family: 'Source Code Pro', monospace;
-    padding-bottom: 12px; }
-    .final-message .restart-btn input {
-      width: 50%;
-      border: 4px solid black;
-      text-transform: uppercase; }
-
-.game-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.game {
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 750px;
-  font-family: 'Source Code Pro', monospace;
-  margin-left: 30px; }
-
-.answer {
-  margin-top: 5%;
-  font-size: 1.5rem;
-  font-family: 'Press Start 2P', cursive; }
-  .answer p.underscore {
-    display: inline; }
-
+/*****************************
+        H A N G M A N / R O B O T
+        C O N T A I N E R  
+    *****************************/
 .hangman-robot {
   width: 40%;
   border: 2px solid white;
@@ -680,7 +601,7 @@ body {
       text-align: center; }
 
 .guess-text-area input {
-  width: 375px;
+  width: 300px;
   height: 40px;
   text-align: center;
   margin-bottom: 15px;
@@ -706,6 +627,103 @@ body {
     color: #00ff00;
     font-size: 1.2rem; }
 
+/******************
+		G A M E
+		S T Y L E S  
+    *******************/
+.wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+.mission-mobile {
+  display: none; }
+
+.mission,
+.mission-mobile {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2%;
+  border: 1px dashed white;
+  text-align: center; }
+  .mission .robot-warning,
+  .mission-mobile .robot-warning {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    letter-spacing: 2px; }
+    .mission .robot-warning .underscore-animation,
+    .mission-mobile .robot-warning .underscore-animation {
+      font-size: 0.6rem; }
+  .mission h3,
+  .mission-mobile h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #00ff00;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+  .mission p,
+  .mission-mobile p {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px; }
+    .mission p .underscore-animation,
+    .mission-mobile p .underscore-animation {
+      color: #00ff00; }
+
+.red-killer {
+  color: #B03030;
+  font-size: 1rem; }
+
+.final-message {
+  display: none;
+  width: 80%;
+  margin: 40px 0 20px;
+  text-align: center;
+  background-color: grey;
+  border: 3px solid white;
+  color: black;
+  padding: 2% 3%; }
+  .final-message p {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    line-height: 1.8; }
+    .final-message p .answer-color {
+      color: white; }
+  .final-message .restart-btn {
+    font-family: 'Source Code Pro', monospace;
+    padding-bottom: 12px; }
+    .final-message .restart-btn input {
+      width: 50%;
+      border: 4px solid black;
+      text-transform: uppercase; }
+
+.game-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.game {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 725px;
+  font-family: 'Source Code Pro', monospace;
+  margin-left: 30px; }
+
+.answer {
+  margin-top: 5%;
+  font-size: 1.5rem;
+  font-family: 'Press Start 2P', cursive; }
+  .answer p.underscore {
+    display: inline; }
+
 .letters-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -716,7 +734,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 5%; }
+  margin: 3% 0 5%; }
   .letters-box .letter-container {
     height: 60px; }
     .letters-box .letter-container p {
@@ -724,12 +742,19 @@ body {
       padding: 0 10px;
       margin: 0; }
 
+form.letters-box input {
+  visibility: hidden; }
+
+.letters-box input:checked + label {
+  color: #00ff00;
+  margin: 2px; }
+
 .wrong-letters {
   border: 2px solid white;
   width: 50%;
   background-color: grey;
   text-align: center;
-  margin: 40px;
+  margin: 30px;
   font-size: 1.3rem; }
   .wrong-letters h4 {
     margin: 0;
@@ -739,9 +764,116 @@ body {
     padding: 10px 0;
     text-transform: uppercase; }
 
-form.letters-box input {
-  visibility: hidden; }
+/******************
+		F O O T E R
+		S T Y L E S  
+    *******************/
+.foot-text {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .foot-text p {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0; }
+  .foot-text .credits {
+    font-size: 0.9rem;
+    color: #bababa; }
 
-.letters-box input:checked + label {
-  color: #00ff00;
-  margin: 2px; }
+.foot-text a {
+  color: white;
+  text-transform: uppercase; }
+  .foot-text a:hover {
+    letter-spacing: 2px;
+    font-weight: 600; }
+
+/******************
+		C R E D I T
+		S T Y L E S  
+    *******************/
+.wrapper.credits {
+  width: 70%; }
+  .wrapper.credits .credit-container h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem; }
+  .wrapper.credits .credit-container p {
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 6%; }
+  .wrapper.credits a {
+    color: grey;
+    font-family: 'Source Code Pro', monospace; }
+    .wrapper.credits a:hover {
+      letter-spacing: 1px;
+      color: #68B5BE; }
+
+/******************
+        M E D I A
+        Q U E R I E S  
+    *******************/
+@media (max-width: 960px) {
+  .header-title h1 {
+    font-size: 2.4rem; }
+    .header-title h1 span.cute-text {
+      font-size: 2rem; }
+  .header-title h2 {
+    font-size: 0.6rem; }
+  .lives {
+    font-size: 0.7rem; }
+    .lives .lives-update {
+      font-size: 1rem; }
+  .guess-text-area input {
+    width: 225px; }
+  .final-message p {
+    font-size: 0.7rem; }
+  .foot-text {
+    margin-top: 15%; } }
+
+@media (max-width: 834px) {
+  .mission {
+    display: none; }
+  .mission-mobile {
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 5%; }
+  .hangman-robot {
+    width: 50%; }
+  .game {
+    width: 50%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .answer {
+    font-size: 1rem;
+    margin-top: 10%; }
+  .letters-box {
+    margin: 10% 0;
+    width: 275px; }
+  .final-message .restart-btn input {
+    width: 80%; } }
+
+@media (max-width: 676px) {
+  .game-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .game-container .game {
+      width: 100%;
+      margin-left: 0;
+      height: 550px;
+      border: 2px solid white; }
+    .game-container .hangman-robot {
+      width: 100%;
+      height: 725px;
+      margin-bottom: 5%; } }
+
+@media (max-width: 602px) {
+  .header-title h1 {
+    margin-bottom: 5%; } }

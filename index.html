@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project Three</title>
+    <title>Cute Killer Robots - A Word Guessing Game</title>
     <link
-    href="https://fonts.googleapis.com/css?family=Bungee+Shade|Meddon|Nosifer|Orbitron:400,900|Press+Start+2P|Righteous|Source+Code+Pro&display=swap"
+    href="https://fonts.googleapis.com/css?family=Bungee+Shade|Meddon|Nosifer|Press+Start+2P|Source+Code+Pro:400,500,600,900&display=swap"&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
     <link type="image/png" href="assets/favicon.png" rel="icon">
@@ -23,33 +23,42 @@
     <main>
       
         <div class="wrapper">
-         
-            <div class="game-container">
+
+            <div class="mission-mobile">
+                <h3>Your Mission</h3>
+                <p class="robot-warning">Robots are taking over the world...<span class="underscore-animation">_ </span></p>
+                <p> Guess the word by selecting one letter at a time and pressing the "Guess A Letter" button.</p>
+                <p>If you know the word, you can guess the word by typing it in the box.</p>
+                <p>GUESS the word before the robot is fully built, because if the robot is built it will turn into a <span
+                        class="red-killer">KILLER</span> robot!</p>
+            </div>
+            
+            <div class="game-container">  
                 <div class="hangman-robot">
                     <div class="lives">
                         <p class="lives">Robot Parts Left: <span class="lives-update"></span></p>
                     </div>
                     <div class="claw-container">
-                        <img class="claw" src="assets/claw-blue.png" alt="">
+                        <img class="claw" src="assets/claw-blue.png" alt="Light blue Cartoon Claw">
                     </div>
                     <div class="robot-container">  
-                        <img class="head" src="assets/head.png" alt="">
-                        <img class="robot-body" src="assets/body-spaced.png" alt="">
-                        <img class="body right-arm" src="assets/body-and-right-arm.png" alt="">
-                        <img class="body both-arms" src="assets/body-and-both-arms.png" alt="">
-                        <img class="body right-leg" src="assets/right-leg-spaced.png" alt="">
-                        <img class="body right-left-leg" src="assets/both-legs.png" alt="">
+                        <img class="head" src="assets/head.png" alt="Light Grey Cartoon Robot Head with Light Blue Eyes">
+                        <img class="robot-body" src="assets/body-spaced.png" alt="Robot Body with Heart in the Corner">
+                        <img class="body right-arm" src="assets/body-and-right-arm.png" alt="Grey Robot Arm with the Robot Body">
+                        <img class="body both-arms" src="assets/body-and-both-arms.png" alt="Both Robot Arms with the Robot Body">
+                        <img class="body right-leg" src="assets/right-leg-spaced.png" alt="Right Robot Leg">
+                        <img class="body right-left-leg" src="assets/both-legs.png" alt="Both Left and Right Robot Legs">
 
                     </div>
                     <div class="evil-robot">
-                        <img src="assets/evil-robot-full.png" alt="">
+                        <img src="assets/evil-robot-full.png" alt="Cute Robot now turned into an evil/killer robot because it has X's on it's eyes, teeth and blood drops out of mouth, and X on robot's heart">
                     </div>
                     <div class="guess-word">
                         <form id="form">
                             <div class="guess-text-area">
                                 <label for="guess-text" class="visuallyHidden">Know the Word? Guess Here and Press Submit</label>
                                 <input type="text" class="guess-text" id="guess-text" name="guess-text" required="true"
-                                    placeholder="Know the Word? Type Your Guess Here">
+                                    placeholder="Type Your Guess Here">
                             </div>
                     
                             <div class="guess-submit">
@@ -257,6 +266,14 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="wrapper">
+            <div class="foot-text">
+                <p>&copy; 2019 CherylCodes.</p>
+                <p class="credits">(Credit Page for Pictures: <a href="credits.html">Here</a>)</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     

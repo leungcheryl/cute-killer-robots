@@ -5,7 +5,7 @@ hangman.words = [
     'BIONIC',
     'CYBORG',
     'MACHINE',
-    'ARTIFICIAL'
+    'COMPUTER'
 ];
 
 hangman.guesses = [];
@@ -23,7 +23,6 @@ hangman.game = function (wordsInLetters, chosenLetter) {
             hangman.correctGuesses = hangman.correctGuesses + 1;
         } 
     });
-    console.log(completeWord)
 
     if (counter === 0) {
         hangman.wrongGuesses.push(chosenLetter);
@@ -52,20 +51,19 @@ hangman.game = function (wordsInLetters, chosenLetter) {
 
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-                <input class="play-again" id="restart" type="reset" value="Click to Try Again!">
+                <input class="play-again" id="restart" type="reset" value="Try Again">
             </div>
             
             `);
             $('.restart-btn').click(function () {
                 window.location.reload(true);
-                alert('clicked');
             });
             $('.robot-container').hide()
             $('.evil-robot').show();
-            $('.guess-word').fadeOut();
-            $('.letters-box').fadeOut('slow');
-            $('.submit-ltr-guess').fadeOut('slow');
-            $('.wrong-letters').fadeOut('slow');
+            $('.guess-word').hide();
+            $('.letters-box').hide();
+            $('.submit-ltr-guess').hide();
+            $('.wrong-letters').hide();
         } else if (hangman.lives === 5) {
             $('.head').show();
         } else if (hangman.lives === 4) {
@@ -84,14 +82,12 @@ hangman.game = function (wordsInLetters, chosenLetter) {
         } 
 
     } else if (counter != 0) {
-        console.log('yay')
         counter = 0;
         $('.answer').html('');    
        
             for (let i = 0; i < wordsInLetters.length; i++) {
 
                 if (hangman.guesses.includes(wordsInLetters[i])) {
-                    console.log(wordsInLetters[i]);
                     $('.answer').append(`${wordsInLetters[i]}`);
                 } else {
                     $('.answer').append(`<p class="underscore"> _ </p>`);
@@ -103,7 +99,7 @@ hangman.game = function (wordsInLetters, chosenLetter) {
         
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-                <input class="play-again" id="restart" type="reset" value="Click to Play Again!">
+                <input class="play-again" id="restart" type="reset" value="Play Again">
             </div>
 
             `);
@@ -111,10 +107,10 @@ hangman.game = function (wordsInLetters, chosenLetter) {
                 window.location.reload(true);
                 alert('clicked');
             });
-            $('.guess-word').fadeOut();
-            $('.letters-box').fadeOut('slow');
-            $('.submit-ltr-guess').fadeOut('slow');
-            $('.wrong-letters').fadeOut('slow');
+            $('.guess-word').hide();
+            $('.letters-box').hide();
+            $('.submit-ltr-guess').hide();
+            $('.wrong-letters').hide();
             $('.answer').html(`${completeWord}`);
         }
     }
@@ -132,7 +128,7 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
 
         <div class="restart-btn">
             <label for="play-again" class="visuallyHidden" id="try-again-btn">Click to play again!</label>
-            <input class="play-again" id="restart" type="reset" value="Click to Play Again!">
+            <input class="play-again" id="restart" type="reset" value="Play Again">
         </div>
 
         `);
@@ -140,10 +136,10 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             window.location.reload(true);
             alert('clicked');
         });
-        $('.guess-word').fadeOut();
-        $('.letters-box').fadeOut('slow');
-        $('.submit-ltr-guess').fadeOut('slow');
-        $('.wrong-letters').fadeOut('slow');
+        $('.guess-word').hide();
+        $('.letters-box').hide();
+        $('.submit-ltr-guess').hide();
+        $('.wrong-letters').hide();
         $('.answer').html(`${completeWord}`);
     } else if (textGuess === '') {
         alert('Please type in a valid guess')
@@ -166,7 +162,7 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
 
             <div class="restart-btn">
                 <label for="play-again" class="visuallyHidden" id="try-again-btn">Click here to play again!</label>
-                <input class="play-again" id="restart" type="reset" value="Click to Try Again!>
+                <input class="play-again" id="restart" type="reset" value="Try Again">
             </div>
             `);
             $('.restart-btn').click(function () {
@@ -175,10 +171,10 @@ hangman.typedFinalGuess = function (textGuess, wordsInLetters) {
             });
             $('.robot-container').hide()
             $('.evil-robot').show();
-            $('.guess-word').fadeOut();
-            $('.letters-box').fadeOut('slow');
-            $('.submit-ltr-guess').fadeOut('slow');
-            $('.wrong-letters').fadeOut('slow');
+            $('.guess-word').hide();
+            $('.letters-box').hide();
+            $('.submit-ltr-guess').hide();
+            $('.wrong-letters').hide();
 
         } else if (hangman.lives === 5) {
             $('.head').show();
@@ -247,10 +243,9 @@ $(document).ready(function () {
 
             if ($('input[name=letter]:checked')) {
                 const inputID = $('input[type=radio][name=letter]:checked').attr('id');
-                $('label[for="' + inputID + '"]').fadeOut();
-                $('input[name=letter]:checked').fadeOut();
+                $('label[for="' + inputID + '"]').hide();
+                $('input[name=letter]:checked').hide();
             }
-
                 
         });
     };
